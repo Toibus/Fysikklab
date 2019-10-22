@@ -1,0 +1,17 @@
+%matplotlib inline
+
+from numpy import *
+from numpy.linalg import solve, norm
+from matplotlib.pyplot import *
+newparams = {'figure.figsize': (8.0, 4.0), 'axes.grid': True,
+             'lines.markersize': 8, 'lines.linewidth': 2,
+             'font.size': 14}
+rcParams.update(newparams)
+
+def p_3(x):
+    return (4*x**2 + 3*x - 2)/2
+x = linspace(-1.5, 1.4, 101)
+plot(x, p_3(x))
+plot([-1, -1/2, 1/2, 1], [-1/2, -5/4, 1/4, 5/2], "o")
+
+
